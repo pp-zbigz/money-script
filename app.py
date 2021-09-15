@@ -5,12 +5,12 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-email_sender_account = "pasuk.study@gmail.com" #your email
-email_sender_username = "pasuk.study@gmail.com"  #your email username
-email_sender_password = "Blackpink_rose2319"#your email password
-email_smtp_server = "smtp.gmail.com" #change if not gmail.
+email_sender_account = "" #your email
+email_sender_username = ""  #your email username
+email_sender_password = ""#your email password
+email_smtp_server = "" #change if not gmail.
 email_smtp_port = 587 #change if needed.
-email_recepients = ["buibuizxcv@gmail.com"] #your receipts
+email_recepients = ["xxx@gmail.com"] #your receipts
 def SendEmail (text,time):
     email_subject = f"Reporting Text Changes at {time}"
     email_body = '<html><head></head><body>'
@@ -35,7 +35,7 @@ def SendEmail (text,time):
 
 def printit():
   threading.Timer(10.0, printit).start()
-  page = requests.get("https://testflight.apple.com/join/5tEPyIU2?fbclid=IwAR0wfD1ikeu4fV_P_lAiB9dYOj89dDEpAYtTJ5jg7ye71AtV5sCBjbIyIg4")
+  page = requests.get("")
   soup = BeautifulSoup(page.content, 'html.parser')
   text = soup.find_all('span')[0].get_text()
   TimeNow = datetime.datetime.now()
